@@ -17,7 +17,8 @@
 <script>
     export default {
         name: "book",
-        props: ['item'],
+        props: ['item','books'],
+
         computed: {
             bookReedStatus: function () {
 
@@ -55,10 +56,11 @@
 
     .book {
 
-        width: 300px;
+        min-width: 300px;
         min-height: 300px;
         border: 1px solid black;
         margin: 5px;
+        padding: 5px;
         border-radius: 6px;
         flex-direction: row;
 
