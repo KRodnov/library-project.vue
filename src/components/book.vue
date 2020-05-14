@@ -1,5 +1,5 @@
 <template>
-    <div class="book-container">
+
     <div v-bind:class="`book ${item.status}`">
         <h4>Книга # {{item.id}} - {{bookReedStatus}}</h4>
         <h1>"{{item.nameBook}}"</h1>
@@ -10,7 +10,7 @@
             <button  v-on:click="editBook">Редактировать</button>
             <button  v-on:click="deleteBook">Удалить книгу</button>
     </div>
-    </div>
+
 
 </template>
 
@@ -51,7 +51,8 @@
 
     .book-container {
         display: flex;
-        width: 100%;
+        flex-wrap: wrap;
+        /*width: 100%;*/
     }
 
     .book {
@@ -63,6 +64,7 @@
         padding: 5px;
         border-radius: 6px;
         flex-direction: row;
+
 
     }
 

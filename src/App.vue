@@ -1,8 +1,11 @@
 <template>
-  <div id="app">
-<forms v-bind:item="editingBook" v-on:back="editingBook = null" v-on:addTodo="addTodoListener" v-on:updateTodo="updateTodoListener" />
-    <book v-for="book in books"  v-bind:item="book" v-on:finishBook="finishBookListener" v-on:editBook="editBookListener" v-on:deleteBook="deleteBookListener" />
-  </div>
+
+    <div id="app">
+    <forms v-bind:item="editingBook" v-on:back="editingBook = null" v-on:addTodo="addTodoListener" v-on:updateTodo="updateTodoListener" />
+        <div class="book-container">
+        <book v-for="book in books"  v-bind:item="book" v-on:finishBook="finishBookListener" v-on:editBook="editBookListener" v-on:deleteBook="deleteBookListener" />
+    </div>
+    </div>
 
 </template>
 
